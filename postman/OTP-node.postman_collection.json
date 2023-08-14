@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "3d770335-9c67-4209-8818-5a08a7616eb4",
+		"name": "OTP-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Sh\",\n    \"lastName\": \"HSD\",\n    \"username\": \"hsddev5254\",\n    \"email\": \"hsddev.salah33555@gmail.com\",\n    \"password\": \"Messi@2011\",\n    \"confirmPassword\": \"Messi@2011\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify email address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"verificationCode\": \"129879\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/verifyEmail",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"verifyEmail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
